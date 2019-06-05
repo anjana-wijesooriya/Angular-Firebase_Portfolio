@@ -1,9 +1,9 @@
 @import "../../styles/variables";
 
-$background-img: 'https://scontent.fcmb2-1.fna.fbcdn.net/v/t1.0-9/12512712_1208312792530184_1296456756391765596_n.jpg?_nc_cat=104&_nc_ht=scontent.fcmb2-1.fna&oh=9280fd7d4fdeeaf513a78f032d5c26dd&oe=5CBA349D';
+$background-img: '../../../assets/one.jpg';
 
 .section {
-  background: url($background-img);
+  background: url($background-img) center;
   position: relative;
   min-height: calc(100vh - 62px);
 
