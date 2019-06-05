@@ -1,0 +1,100 @@
+@import '../../../styles/variables';
+
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-clip: padding-box;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.1);
+  padding: 20px;
+
+  .card-content {
+    padding-bottom: 30px;
+
+    .row {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+
+      .img-block {
+        padding: 10px;
+      }
+    }
+
+    .col.sm-12.col-sm-2 {
+      text-align: center;
+    }
+
+    .col-sm-12.col-md-10 {
+
+      p {
+        padding-top: 10px;
+
+        .card-title {
+          line-height: 2.5rem;
+          font-size: 24px;
+          font-weight: 300;
+
+          .teal-text {
+            color: $teal !important;
+          }
+
+          .hoverline {
+            border-bottom: 3px solid transparent !important;
+            padding: 3px 3px 0 3px;
+            transition: .25s all;
+            -moz-transition: .25s all;
+            -webkit-transition: .25s all;
+          }
+          & :hover {
+            border-bottom: 3px solid #009688 !important;
+          }
+        }
+      }
+    }
+
+    .role {
+      font-size: 1.25rem;
+      position: absolute;
+      right: 38px;
+      top: 35px;
+    }
+    &.brown-text {
+      color: $brown !important;
+    }
+
+    .tech-tags {
+
+      li {
+        display: inline-block;
+        overflow: hidden;
+        margin: 0;
+        margin-right: 10px;
+
+        a {
+          display: inline-block;
+          background-color: $teal;
+          color: #FFF;
+          padding: 4px 10px;
+          font-size: 13px;
+          text-transform: uppercase;
+          border: 0px;
+        }
+        & a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+   img.center-block {
+    width:120px;
+   }
+ }

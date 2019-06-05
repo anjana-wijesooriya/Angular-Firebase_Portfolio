@@ -1,0 +1,58 @@
+<section id="about" class="section">
+    <h3 class="page-title white-text teal">
+      About
+    </h3>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12" >
+          <blockquote>
+            <h2 [innerHTML]="vision.Description">Mission-driven full stack developer with a passion for thoughtful UI design, collaboration, and teaching.</h2>
+          </blockquote>
+          <p *ngFor="let story of stories" [innerText]="story.Description">
+          </p>
+          <p>
+            <strong>Current Focus</strong>:&nbsp;
+            <a *ngFor="let focus of currentFocus; let i = index; let isLast = last" href="#" >
+              {{focus.Description}} {{ (!isLast) ? ' // ': ''}}
+            </a>
+          </p>
+          <div class="card mb-3">
+            <div class="card-content">
+              <h4 class="brown-text light">
+                <i class="ti-pencil-alt"></i> FRONT-END WEB DEVELOPMENT
+              </h4>
+              <p *ngFor="let header of frontendHeader; let isLast = last;" [innerHTML]="header.Description"></p>
+                <ul>
+                    <li *ngFor="let experience of frontendExperience; let isLast = last;" [innerHTML]="experience.Description"></li>
+                    <!-- <li>
+                      ... and even <strong>mobile app  development</strong> with the use of <a href="http://ionicframework.com/" rel="nofollow">Ionic Framework</a>.
+                      <br>
+                       With these, I can build a fully working native application for iOS and Android (both at once!) in Javascript in less than month.
+                       <br>
+                       <strong>You can already find some of my mobile applications in <a href="/portfolio/">my portfolio</a>.</strong>
+                    </li> -->
+                  </ul>
+            </div>
+          </div>
+          <div class="card mb-3">
+              <div class="card-content">
+                <h4 class="brown-text light">
+                  <i class="ti-pencil-alt"></i> BACK-END DEVELOPMENT
+                </h4>
+                <p *ngFor="let header of backendHeader; let isLast = last;" [innerHTML]="header.Description"></p>
+                  <ul>
+                      <li *ngFor="let experience of backendExperience; let isLast = last;" [innerHTML]="experience.Description"></li>
+                      <!-- <li>
+                        ... and even <strong>mobile app  development</strong> with the use of <a href="http://ionicframework.com/" rel="nofollow">Ionic Framework</a>.
+                        <br>
+                         With these, I can build a fully working native application for iOS and Android (both at once!) in Javascript in less than month.
+                         <br>
+                         <strong>You can already find some of my mobile applications in <a href="/portfolio/">my portfolio</a>.</strong>
+                      </li> -->
+                    </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>

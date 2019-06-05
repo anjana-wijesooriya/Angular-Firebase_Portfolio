@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.section {
+  .page-title {
+   font-weight: 200;
+   margin-bottom: 60px;
+   margin-top: 0;
+   padding: 30px 40px;
+   text-transform: uppercase;
+  }
+
+  .white-text {
+   color: $white !important;
+  }
+
+  .teal {
+   background-color: $teal !important;
+  }
+
+  .card {
+    // height: 400px;
+    position: relative;
+    overflow: hidden;
+
+    .card-content {
+      overflow: hidden;
+      padding-bottom: 30px;
+      padding: 20px;
+
+      .card-title {
+        line-height: 2.5rem;
+
+        .ti-comment-alt {
+          margin-left: 10px;
+          float: right;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+}

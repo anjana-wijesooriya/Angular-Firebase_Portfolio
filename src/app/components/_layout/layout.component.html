@@ -1,0 +1,24 @@
+<div class="app" [ngClass]="{'is-collapsed': isShowNav, 'show-sidebar': !isShowNav}">
+  <div>
+    <!-- #Left Sidebar ==================== -->
+    <app-navbar #navbar (isShowNavbar)="onHideNavbar($event)"></app-navbar>
+
+    <!-- #Main ============================ -->
+    <div class="page-container">
+
+      <!-- ### $Topbar ### -->
+      <app-header (isShowNavbar)="onShowNavbar($event)" [navbar]="navbar"></app-header>
+
+      <!-- ### $App Screen Content ### -->
+      <main class="main-content bgc-grey-100"  [@routeAnimations]="prepareRoute(outlet)">
+        <div id="mainContent">
+          <router-outlet  #outlet="outlet"></router-outlet>
+        </div>
+      </main>
+
+      <!-- ### $App Screen Footer ### -->
+      <app-footer></app-footer>
+    </div>
+  </div>
+
+</div>

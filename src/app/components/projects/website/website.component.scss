@@ -1,0 +1,156 @@
+@import "../../../styles/variables";
+
+.card.medium {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+
+  .card-image {
+    overflow: hidden;
+    height: 140px;
+
+    img {
+      border-radius: 2px 2px 0 0;
+      background-clip: padding-box;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .card-content {
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 30px;
+    padding: 20px;
+
+    .card-title {
+      line-height: 1.7rem;
+      font-size: 20px;
+
+      .ti-comment-alt {
+        margin-left: 10px;
+        float: right;
+        cursor: pointer;
+      }
+
+      .ti-menu {
+        float: right;
+        cursor: pointer;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .card-reveal {
+    padding: 20px;
+    position: absolute;
+    background-color: $white;
+    width: 100%;
+    overflow-y: auto;
+    top: 100%;
+    height: 100%;
+    z-index: 1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    animation: slidedown 1s;
+    transform: translateY(0%);
+
+    .ti-angle-double-down, .ti-arrow-circle-down {
+      cursor: pointer;
+    }
+
+    .brown-text {
+      color: $brown !important;
+    }
+
+    ul {
+      padding-left: 0px;
+      padding-top: 20px;
+    }
+
+    .card-action {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-top: 1px solid rgba(160,160,160,0.2);
+      padding: 20px;
+
+      a {
+        font-size: 16px;;
+        margin-right: 20px;
+        background-color: $brown;
+        color: $white;
+        text-align: center;
+        letter-spacing: 0.5px;
+        position: relative;
+        min-width: 55px;
+        display: inline-block;
+
+        i {
+          font-size: 24px;
+          display: inline-block;
+          line-height: 55.5px;
+          min-width: 55px;
+          height: 55px;
+        }
+      }
+
+      .btn-floating {
+        border-radius: 50%;
+        margin-bottom: 0;
+        display: inline-block;
+        color: #FFF;
+        position: relative;
+        z-index: 1;
+        width: 37px;
+        height: 37px;
+        line-height: 37px;
+        padding: 0;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background-clip: padding-box;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -ms-transition: 0.3s;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .btn-large {
+        width: 55.5px;
+        height: 55.5px;
+      }
+    }
+  }
+
+  .slideup {
+    animation: slideup 1s;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

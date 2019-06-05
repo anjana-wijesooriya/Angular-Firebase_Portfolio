@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+
+.section {
+  .page-title {
+   font-weight: 200;
+   margin-bottom: 60px;
+   margin-top: 0;
+   padding: 30px 40px;
+   text-transform: uppercase;
+  }
+
+  .white-text {
+   color: $white !important;
+  }
+
+  .teal {
+   background-color: $teal !important;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+
+    .card-content {
+      overflow: hidden;
+      padding-bottom: 30px;
+      padding: 20px;
+      padding-bottom: 30px;
+
+      p {
+        padding: 5px 0 0;
+        margin-bottom: 0px;
+
+        .card-title {
+          line-height: 2.5rem;
+          font-size: 24px;
+          font-weight: 300;
+
+          a {
+            border-bottom: 3px solid transparent !important;
+            padding: 3px 3px 0 3px;
+            transition: .25s all;
+            -moz-transition: .25s all;
+            -webkit-transition: .25s all;
+          }
+
+          a.hoverline:hover {
+            border-bottom: 3px solid $teal !important;
+          }
+        }
+      }
+
+      .brown-text {
+        color: $brown;
+      }
+
+      ul {
+        margin-bottom: 0;
+        padding-left: 0px;
+        margin-top:10px;
+
+        li {
+          line-height: 200%;
+          list-style-type: disc;
+          margin-left: 24px;
+        }
+
+        @media (max-width: 1360px){
+          li {
+            font-size: 14px;
+            line-height: 200%;
+            margin-left: 20px;
+          }
+        }
+        @media (max-width: 1160px) {
+          li {
+            line-height: 150%;
+          }
+        }
+      }
+    }
+  }
+}

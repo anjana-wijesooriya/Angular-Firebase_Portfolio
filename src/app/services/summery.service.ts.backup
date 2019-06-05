@@ -1,0 +1,80 @@
+import { Injectable } from "@angular/core";
+
+import { AngularFireDatabase } from "angularfire2/database";
+import { AngularFirestore } from "angularfire2/firestore";
+import { AngularFireObject, AngularFireList } from "angularfire2/database";
+import { SummeryQoute } from "../models/qoute.model";
+import { throwError, Observable } from "rxjs";
+import { promise } from "protractor";
+
+@Injectable({
+  providedIn: "root"
+})
+export class SummeryService {
+  qoutesRef: any;
+  qouteRef: any;
+  _qoute: AngularFireObject<SummeryQoute>;
+  _qoutes: AngularFireList<SummeryQoute>;
+  collectiona: any;
+  val1;
+  val2;
+
+  constructor(
+    private firebase: AngularFireDatabase,
+    private firestore: AngularFirestore
+  ) {
+    const rootDbRef = firebase.database.ref();
+
+    rootDbRef
+      .child("summery")
+      .on("value", snap =>
+        console.log("Received the whole courses node", snap.val())
+      );
+
+    this.qouteRef = firebase.database.ref("summery");
+    this.qoutesRef = firebase.database.ref("summery");
+  }
+
+  getPolicies() {
+    return this.firestore.collection("policies").snapshotChanges();
+  }
+
+  createPolicy(policy: SummeryQoute) {
+    return this.firestore.collection("policies").add(policy);
+  }
+
+//   updatePolicy(policy: SummeryQoute){
+//     delete policy.id;
+//     this.firestore.doc('policies/' + policy.id).update(policy);
+// }
+  FindAllQoutes(): SummeryQoute[] {
+    return this.firebase.database.ref("books").toJSON() as SummeryQoute[];
+  }
+
+  AddNewSummeryQoute(qoute: SummeryQoute): Promise<string> {
+    return this.firebase.database
+      .ref("summery/qoutes")
+      .push(qoute)
+      .then(e => "Added Successfully." + e.key)
+      .catch(e => {
+        throw e;
+      });
+  }
+
+  GetActivatedQoute(): Observable<SummeryQoute[]> {
+    return this.firebase
+      .object<SummeryQoute[]>("summery/qoutes")
+      .valueChanges();
+  }
+
+  handleError(error) {
+    let errorMsg = "";
+    if (error.error instanceof ErrorEvent) {
+      errorMsg = `Error: ${error.error.message}`;
+    } else {
+      errorMsg = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMsg);
+    return throwError(errorMsg);
+  }
+}

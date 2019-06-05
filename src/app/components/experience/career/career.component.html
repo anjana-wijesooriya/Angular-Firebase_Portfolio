@@ -1,0 +1,73 @@
+<div class="card">
+  <div class="card-content">
+    <div class="row">
+      <div class="col-sm-12 col-md-2 img-block">
+        <a [href]="job.CompanyURL" _target="_blank">
+          <img [src]="job.CompanyLogo" [alt]="job.Company" class="responsive-img center-block">
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-10">
+        <p>
+          <span class="card-title">
+            <a [href]="job.CompanyURL" class="teal-text hoverline" [innerText]="job.Company"></a>
+          </span>
+        </p>
+      </div>
+      <div class="role text-brown" [innerText]="job.Designation">
+        Full-Stack Web Developer
+      </div>
+    </div>
+    <p>
+      <em class="grey-text" *ngFor="let summery of job.Summery" [innerText]="summery.Description">
+        "Resposible for leading the designing, development, testing, debugging, maintaining and documenting software components in accordance
+        to Software Development Life Cycle(SDLC) best practices. I'm holding overall responsibility in the technical design process and completes
+        estimates and work plans for design, development, implementation, and rollout tasks. Also communicates with <strong>Belgium</strong> clients to ensure that
+         assignmentsare delivered with highest of quality and in accordance to the standards. I strives to continuously improve the software delivery
+         processes and practices."
+      </em>
+    </p>
+    <h6>
+      Responsibilities
+    </h6>
+    <ul>
+      <li *ngFor="let responsibility of job.Responsibilities" [innerText]="responsibility.Description">Developing Web applications using ASP.Net(MVC), Web API, Javascript(Jquery, KnockoutJs, AngularJs/ VueJs,...etc.), HTML5, SCSS & MS SQL.
+      <!-- <li>Collaborate with clients and users to gather accurate specifications for new enhancements and applications.</li>
+      <li>Building and testing APIs for applications to exchange data.</li>
+      <li>Integrate with third-party technologies using their APIs.</li>
+      <li>Collaborate with UI/UX Developers to translate visual concepts into animated, responsive web pages using HTML5, CSS3, or Web-based animation tools.</li>
+      <li>Develop animations, navigation, interactivity, etc., using jQuery or other JavaScript libraries.</li>
+      <li>Thoroughly test the work on multiple browsers and mobile devices.</li>
+      <li>Create re-usable components and code snippets.</li>
+      <li>Maintain existing code and assets and troubleshoot bugs within a complex, global code base.</li>
+      <li>Running performance benchmarking tests.</li>
+      <li>Building and maintaining databases.</li>
+      <li>Administer, configure, monitor and test application servers.</li>
+      <li>Active participation through all phases of the development lifecycle.</li>
+      <li>Create and document development specifications and work completed.</li> -->
+    </ul>
+    <!-- <h6>ACCOMPLISHMENTS</h6>
+    <ul>
+      <li></li>
+    </ul> -->
+    <h6>Tools & Technologies</h6>
+    <ul class="tech-tags">
+      <li *ngFor="let techs of job.Technologies"><a href="#" rel="nofollow" target="_blank" [innerText]="techs.Description">ASP.NET/ .NET CORE</a></li>
+      <!-- <li><a href="#" rel="nofollow" target="_blank">C#</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">MVC5</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">jQuery</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">HTML5/SASS</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">Bootstrap 3 and 4</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">MSSQL</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">Vue.js</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">Knockout.js</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">Node.js</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">Gulp.js</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">AJAX/JSON</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">Webpack</a></li>
+      <li><a href="#" rel="nofollow" target="_blank">Web API</a></li> -->
+    </ul>
+  </div>
+  <div class="card-action">
+      <span [innerText]="job.From + ' - ' + job.To + '   |   ' + job.Location">July 2017 - Present  |  Colombo, SL</span>
+  </div>
+</div>

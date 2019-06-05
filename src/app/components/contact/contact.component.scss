@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+
+.section {
+  .page-title {
+   font-weight: 200;
+   margin-bottom: 60px;
+   margin-top: 0;
+   padding: 30px 40px;
+   text-transform: uppercase;
+  }
+
+  .white-text {
+   color: $white !important;
+  }
+
+  .teal {
+   background-color: $teal !important;
+  }
+
+  a.btn-floating {
+    font-size: 16px;;
+    margin-right: 20px;
+    background-color: $brown;
+    color: $white;
+    text-align: center;
+    letter-spacing: 0.5px;
+    position: relative;
+    min-width: 55px;
+    display: inline-block;
+
+    i {
+      font-size: 24px;
+      display: inline-block;
+      line-height: 55.5px;
+      min-width: 55px;
+      height: 55px;
+    }
+  }
+
+  a.hoverline:hover {
+    color: $teal;
+  }
+
+  .btn-floating {
+    border-radius: 50%;
+    margin-bottom: 0;
+    display: inline-block;
+    color: #FFF;
+    position: relative;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: padding-box;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .btn-large {
+    width: 55.5px;
+    height: 55.5px;
+  }
+}

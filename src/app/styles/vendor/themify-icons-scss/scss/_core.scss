@@ -1,0 +1,143 @@
+
+[class^="#{$ti-class-prefix}-"],
+[class*=" #{$ti-class-prefix}-"] {
+  @include font-themify-icons();
+}
+
+[class^="#{$ti-class-prefix}-"]:before,
+[class*=" #{$ti-class-prefix}-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+/* makes the font 33% larger relative to the #{$ti-class-prefix} container */
+.#{$ti-class-prefix}-large:before {
+  vertical-align: -10%;
+  font-size: (4em/3);
+}
+
+/* makes sure #{$ti-class-prefix}s active on rollover in links */
+a {
+  [class^="#{$ti-class-prefix}-"],
+  [class*=" #{$ti-class-prefix}-"] {
+    display: inline;
+  }
+}
+
+/* increased font size for #{$ti-class-prefix}-large */
+[class^="#{$ti-class-prefix}-"],
+[class*=" #{$ti-class-prefix}-"] {
+  &.#{$ti-class-prefix}-fixed-width {
+    display: inline-block;
+    width: (16em/14);
+    text-align: right;
+    padding-right: (4em/14);
+    &.#{$ti-class-prefix}-large {
+      width: (20em/14);
+    }
+  }
+}
+
+.#{$ti-class-prefix}s-ul {
+  margin-left: $icons-li-width;
+  list-style-type: none;
+
+  > li {
+    position: relative;
+  }
+
+  .#{$ti-class-prefix}-li {
+    position: absolute;
+    left: -$icons-li-width;
+    width: $icons-li-width;
+    text-align: center;
+    line-height: inherit;
+  }
+}
+
+// allows usage of the hide class directly on font awesome #{$ti-class-prefix}s
+[class^="#{$ti-class-prefix}-"],
+[class*=" #{$ti-class-prefix}-"] {
+  &.hide {
+    display: none;
+  }
+}
+
+.#{$ti-class-prefix}-muted {
+  color: $iconMuted;
+}
+
+.#{$ti-class-prefix}-light {
+  color: $iconLight;
+}
+
+.#{$ti-class-prefix}-dark {
+  color: $iconDark;
+}
+
+// Icon Borders
+// -------------------------
+
+.#{$ti-class-prefix}-border {
+  border: solid 1px $borderColor;
+  padding: .2em .25em .15em;
+  @include border-radius(3px);
+}
+
+// Icon Sizes
+// -------------------------
+
+.#{$ti-class-prefix}-2x {
+  font-size: 2em;
+  &.#{$ti-class-prefix}-border {
+    border-width: 2px;
+    @include border-radius(4px);
+  }
+}
+
+.#{$ti-class-prefix}-3x {
+  font-size: 3em;
+  &.#{$ti-class-prefix}-border {
+    border-width: 3px;
+    @include border-radius(5px);
+  }
+}
+
+.#{$ti-class-prefix}-4x {
+  font-size: 4em;
+  &.#{$ti-class-prefix}-border {
+    border-width: 4px;
+    @include border-radius(6px);
+  }
+}
+
+.#{$ti-class-prefix}-5x {
+  font-size: 5em;
+  &.#{$ti-class-prefix}-border {
+    border-width: 5px;
+    @include border-radius(7px);
+  }
+}
+
+// Floats & Margins
+// -------------------------
+
+// Quick floats
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+[class^="#{$ti-class-prefix}-"],
+[class*=" #{$ti-class-prefix}-"] {
+  &.pull-left {
+    margin-right: .3em;
+  }
+  &.pull-right {
+    margin-left: .3em;
+  }
+}

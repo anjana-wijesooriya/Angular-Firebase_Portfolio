@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./app/styles/index.scss";
+
+@media screen and (max-width: 1439px) and (min-width: 992px) {
+  .is-collapsed {
+
+    .sidebar {
+      width: 220px !important;
+    }
+
+    .page-container {
+      padding-left: 220px!important;
+    }
+  }
+}

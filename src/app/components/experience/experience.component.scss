@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+#experience {
+ .page-title {
+  font-weight: 200;
+  margin-bottom: 60px;
+  margin-top: 0;
+  padding: 30px 40px;
+  text-transform: uppercase;
+ }
+
+ .white-text {
+  color: $white !important;
+ }
+
+ .teal {
+  background-color: $teal !important;
+ }
+
+}
+@media (min-width: 1200px){
+
+  #experience {
+
+    .container {
+      width: 860px;
+    }
+
+  }
+
+}

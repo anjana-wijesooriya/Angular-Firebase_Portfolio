@@ -1,0 +1,10 @@
+.main-content {
+  padding: 0px;
+  min-height: calc(100vh - 122px);
+  background: url(https://andrewborstein.com/static/img/bg.png) repeat;
+}
+@media(max-width:768px){
+  .main-content {
+    padding-top: 66px;
+  }
+}

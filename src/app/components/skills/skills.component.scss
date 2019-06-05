@@ -1,0 +1,74 @@
+@import '../../styles/variables';
+
+.section {
+  .page-title {
+   font-weight: 200;
+   margin-bottom: 60px;
+   margin-top: 0;
+   padding: 30px 40px;
+   text-transform: uppercase;
+  }
+
+  .white-text {
+   color: $white !important;
+  }
+
+  .teal {
+   background-color: $teal !important;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+
+    .card-content {
+      overflow: hidden;
+      padding-bottom: 30px;
+      padding: 20px;
+
+      .card-title {
+        line-height: 2.5rem;
+
+        .ti-comment-alt {
+          margin-left: 10px;
+          float: right;
+          cursor: pointer;
+        }
+      }
+
+      .flex-box {
+        max-width: 150px;
+        width: 150px;
+        min-width: 150px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 30px;
+
+        img.responsive-img {
+          margin: 0 auto;
+          max-height: 100px;
+          padding-bottom: 10px;
+          text-align: center;
+          vertical-align: middle;
+          display: table-cell;
+        }
+      }
+
+      .peers {
+
+        .peer {
+
+          .img {
+            margin: 0 auto;
+            max-height: 100px;
+            padding-bottom: 10px;
+            text-align: center;
+            vertical-align: middle;
+            display: table-cell;
+          }
+        }
+      }
+    }
+  }
+
+}

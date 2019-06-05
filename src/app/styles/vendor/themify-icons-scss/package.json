@@ -1,0 +1,43 @@
+{
+  "_from": "themify-icons-scss",
+  "_id": "themify-icons-scss@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-EmKlB+4x1+fhMPKGr/Ypdgq6h9Y=",
+  "_location": "/themify-icons-scss",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "themify-icons-scss",
+    "name": "themify-icons-scss",
+    "escapedName": "themify-icons-scss",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/themify-icons-scss/-/themify-icons-scss-1.0.0.tgz",
+  "_shasum": "1262a507ee31d7e7e130f286aff629760aba87d6",
+  "_spec": "themify-icons-scss",
+  "_where": "F:\\Projects\\Angular 7\\ApplicationOne",
+  "author": {
+    "name": "Frank Giger"
+  },
+  "bugs": {
+    "url": "https://github.com/Frolki1-Dev/themify-icons-sass/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Font and SCSS files for the font Themify",
+  "homepage": "https://github.com/Frolki1-Dev/themify-icons-sass#readme",
+  "license": "MIT",
+  "name": "themify-icons-scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frolki1-Dev/themify-icons-sass.git"
+  },
+  "version": "1.0.0"
+}
