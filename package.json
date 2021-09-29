@@ -38,7 +38,7 @@
     "@types/node": "~8.9.4",
     "angularfire2": "^5.1.1",
     "codelyzer": "~4.5.0",
-    "i": "^0.3.6",
+    "i": "^0.3.7",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
